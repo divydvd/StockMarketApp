@@ -1,4 +1,4 @@
-package com.plcoding.stockmarketapp
+package com.nexuscoding.stockmarketapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
