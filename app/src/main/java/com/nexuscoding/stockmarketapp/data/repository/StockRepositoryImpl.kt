@@ -1,7 +1,6 @@
 package com.nexuscoding.stockmarketapp.data.repository
 
 import com.nexuscoding.stockmarketapp.data.csv.CSVParser
-import com.nexuscoding.stockmarketapp.data.csv.CompanyListingParser
 import com.nexuscoding.stockmarketapp.data.local.StockDatabase
 import com.nexuscoding.stockmarketapp.data.mapper.toCompanyListing
 import com.nexuscoding.stockmarketapp.data.mapper.toCompanyListingEntity
@@ -18,9 +17,9 @@ import javax.inject.Singleton
 
 @Singleton
 class StockRepositoryImpl @Inject constructor(
-    val api: StockApi,
-    val db: StockDatabase,
-    val companyListingsParser: CSVParser<CompanyListing>
+    private val api: StockApi,
+    private val db: StockDatabase,
+    private val companyListingsParser: CSVParser<CompanyListing>
 ): StockRepository {
 
     private val dao = db.dao
